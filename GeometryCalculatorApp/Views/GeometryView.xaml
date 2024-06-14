@@ -7,9 +7,16 @@
              d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
         <StackPanel>
+            <!-- TextBox do wprowadzenia szerokości -->
             <TextBox x:Name="WidthTextBox" Text="Enter width" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Margin="10"/>
+
+            <!-- TextBox do wprowadzenia wysokości -->
             <TextBox x:Name="HeightTextBox" Text="Enter height" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Margin="10"/>
+
+            <!-- Przycisk do wywołania obliczeń -->
             <Button Content="Calculate" Click="OnCalculateClick" Margin="10"/>
+
+            <!-- TextBlock do wyświetlania wyników obliczeń -->
             <TextBlock x:Name="ResultTextBlock" Margin="10"/>
         </StackPanel>
     </Grid>

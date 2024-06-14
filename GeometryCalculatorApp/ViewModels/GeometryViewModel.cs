@@ -4,12 +4,14 @@ using GeometryCalculatorApp.Models;
 
 namespace GeometryCalculatorApp.ViewModels
 {
+    // Klasa ViewModel, która łączy model z widokiem i zarządza stanem aplikacji
     public class GeometryViewModel : INotifyPropertyChanged
     {
         private double _width;
         private double _height;
         private string _result;
 
+        // Właściwość Width z powiadomieniem o zmianie
         public double Width
         {
             get => _width;
@@ -20,6 +22,7 @@ namespace GeometryCalculatorApp.ViewModels
             }
         }
 
+        // Właściwość Height z powiadomieniem o zmianie
         public double Height
         {
             get => _height;
@@ -30,6 +33,7 @@ namespace GeometryCalculatorApp.ViewModels
             }
         }
 
+        // Właściwość Result z powiadomieniem o zmianie
         public string Result
         {
             get => _result;
@@ -40,6 +44,7 @@ namespace GeometryCalculatorApp.ViewModels
             }
         }
 
+        // Metoda Calculate wykonująca obliczenia i ustawiająca wynik
         public void Calculate()
         {
             var model = new ShapeModel { Width = this.Width, Height = this.Height };
@@ -50,8 +55,10 @@ namespace GeometryCalculatorApp.ViewModels
             Result = $"Area: {area}, Perimeter: {perimeter}, Diagonal: {diagonal}, Total Edge Length: {totalEdgeLength}";
         }
 
+        // Implementacja interfejsu INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
+        // Metoda powiadamiająca o zmianie właściwości
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
