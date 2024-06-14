@@ -1,4 +1,3 @@
-```markdown
 # Geometry Calculator App
 
 ## Opis projektu
@@ -82,12 +81,3 @@ Geometry Calculator App to aplikacja WPF (Windows Presentation Foundation), któ
      - Przekątną (`Diagonal`)
      - Sumę długości wszystkich boków (`Total Edge Length`)
 
-## Kontakt
-
-Jeśli masz jakieś pytania lub sugestie, proszę o kontakt na adres: [Twój email lub inne informacje kontaktowe].
-
----
-
-Dziękujemy za używanie Geometry Calculator App!
-
-```
